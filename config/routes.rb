@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root "users#index"
+  root "sessions#new"
+  post 'login', :to => 'sessions#create'
   resources "users"
+
 end

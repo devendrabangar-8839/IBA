@@ -8,3 +8,14 @@
   width: 100vw;
   background-color: cyan;
 }
+.login-form{
+  border: 2px solid black;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 15%;
+}
+/*
+.login-buttons{
+  display: flex;
+  justify-content: space-between;
+}*/
