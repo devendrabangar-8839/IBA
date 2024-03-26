@@ -1,0 +1,11 @@
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  setTimeout(function(){
+    $('.alert').css("display", "none");
+  },5000);
+</script>

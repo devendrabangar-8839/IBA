@@ -1,0 +1,34 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Segment</th>
+      <th scope="col">Model</th>
+      <th scope="col">Product Details</th>
+      <th scope="col">Warranty Details</th>
+      <th scope="col">Price</th>
+      <th scope="col">Review Video Link</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  	<% @products.each do |product| %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.brand_id %> : <%= product.brand.brand_name%></td>
+        <td><%= product.brand_segment_id %> : <%= product.brand_segment.segment%></td>
+        <td><%= product.model_no %></td>
+        <td><%= product.product_detail %></td>
+        <td><%= product.warranty_details %></td>
+        <td><%= product.price %></td>
+        <td><%= product.review_video_link %></td>
+        <td>
+          <%= link_to "Edit", edit_product_path(product.id), class: "btn btn-primary btn-sm" %>
+          <%= link_to "Delete", "/delete_products/#{product.id}", data: { confirm: "Are you sure you want to delete this product?" }, class: "btn btn-danger btn-sm ml-1" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

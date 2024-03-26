@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    /* Sidebar Styles */
+    .sidebar {
+      background-color: #333;
+      color: #fff;
+      height: 100vh;
+      width: 20%; /* Set sidebar width to 20% */
+    }
+    /* Main Section Styles */
+    .main-section {
+      padding: 20px;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        float: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-2 sidebar"> <!-- Set col-md-2 for 20% width -->
+      <h2>Sidebar</h2>
+      <p>Navigation links</p>
+      <!-- Add your sidebar content here -->
+    </div>
+    <!-- Main Section -->
+    <div class="col-md-10 main-section"> <!-- Set col-md-10 for remaining width -->
+      <h2>Main Section</h2>
+      <p>This is where the main content goes.</p>
+      <!-- Add your main content here -->
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery

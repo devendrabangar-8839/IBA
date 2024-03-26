@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_05_170430) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_24_090035) do
+  create_table "brand_segments", force: :cascade do |t|
+    t.string "segment"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "brand_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer "brand_id"
+    t.integer "brand_segment_id"
+    t.string "model_no"
+    t.string "product_detail"
+    t.string "warranty_details"
+    t.integer "price"
+    t.string "review_video_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "father_name"

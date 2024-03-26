@@ -1,0 +1,39 @@
+<%= form_for @product, method: :post do |form| %>
+  <h1 class="text-center">Ecom-Shopees</h1>
+  <a href="#", data-toggle="modal" data-target="#exampleModalCenterBulkUpload">Bulk Upload Product</a>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Brands <a href="#", data-toggle="modal" data-target="#exampleModalCenter">Add Brand</a> </label>
+   <%= form.select 'brand_id', options_for_select(@brands), { id: "exampleFormControlSelect1", class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Brand Segment <a href="#", data-toggle="modal" data-target="#exampleModalCenterSegment">Add Segment</a></label>
+   <%= form.select 'brand_segment_id', options_for_select(@segments), { id: "exampleFormControlSelect1", class: "form-control" } %>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Model</label>
+    <%= form.text_field :model_no, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Product Detail</label>
+    <%= form.text_field :product_detail, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Warranty Detail</label>
+    <%= form.text_field :warranty_details, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Price</label>
+    <%= form.text_field :price, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Review Video Link</label>
+    <%= form.text_field :review_video_link, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+  </div>
+  <div class="login-buttons">
+    <%= form.button "Submit", class: "btn btn-primary", type: "submit" %>
+  </div>
+<% end %>
+<%= render partial: "products/add_segment" %>
+<%= render partial: "products/add_brand" %>
+<%= render partial: "products/bulk_product_upload" %>

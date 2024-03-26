@@ -1,0 +1,28 @@
+<div class="modal fade" id="exampleModalCenterSegment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add New Product Segment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_with(url: create_brand_segment_path, method: :post) do |form| %>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Brands</label>
+           <%= form.select 'brand_id', options_for_select(@brands), { id: "exampleFormControlSelect1", class: "form-control" } %>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Segment</label>
+            <%= form.text_field :segment, {class: "form-control", id: "exampleFormControlTextarea1"} %>
+          </div>
+          <div class="modal-footer">
+              <%= form.button "Submit", class: "btn btn-primary", type: "submit" %>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

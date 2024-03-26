@@ -1,38 +1,33 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+.sidebar {
+  background-color: #333;
+  color: #fff;
   height: 100vh;
+  width: 20%; /* Set sidebar width to 20% */
 }
-
-nav {
-  width: 100%;
-  height: 7.5vh;
-  background-color: #333;
-  color: #fff;
+/* Main Section Styles */
+.main-section {
+  padding: 20px;
 }
-
-.main-container {
-  width: 100%;
-  height: 85vh;
-  margin: 0 auto;
-}
-
-footer {
-  width: 100%;
-  height: 7.5vh;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-}
-
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-  nav, footer {
-    height: 15vh; /* Adjust as needed */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    float: none;
   }
-
-  .main-container {
-    height: 70vh; /* Adjust as needed */
-  }
+}
+.login-div{
+  margin: 10vw;
+  padding: 5%;
+}
+.nav-div{
+  margin-top: 50px;
+}
+.nav-item a{
+  display: flex;
+  color: white;
+}
+.nav-links{
+  margin-top: 20px;
 }
